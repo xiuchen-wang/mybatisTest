@@ -20,7 +20,7 @@ public class UserMapperTest {
 	// 会话工厂
 	private SqlSessionFactory sqlSessionFactory;
 	// 创建工厂
-	@Before
+	@Before 
 	public void init() throws Exception {
 		
 		String resourse = "SqlMapConfig.xml";

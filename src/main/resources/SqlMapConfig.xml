@@ -32,7 +32,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	 -->
 	<mappers>
 		<!-- 通过resource引用mapper的映射文件 -->
-		<mapper resource="com/zheheng/mapping/User.xml" />
 		<mapper resource="com/zheheng/mapper/UserMapper.xml" />
 	</mappers> 
 	
