@@ -3,13 +3,14 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-	<!-- 属性定义
-	加载一个properties文件
-	在 properties标签 中配置属性值
-	 -->
+	<!-- 属性定义 加载一个properties文件 -->
 	<properties resource="db.properties">
-		<!-- <property name="" value=""/> -->
+	<property name="password" value="admin123"/>
 	</properties>
+	
+	<typeAliases> 
+		<package name="com.zheheng.po"/>
+	</typeAliases>
 	
 	
 	<!-- 和spring整合后 environments配置将废除-->
@@ -22,7 +23,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 				<property name="driver" value="${jdbc.driver}"/>
 				<property name="url" value="${jdbc.url}"/>
 				<property name="username" value="${jdbc.username}"/>
-				<property name="password" value="${jdbc.password}"/>
+				<property name="password" value="${password}"/>
 			</dataSource>
 		</environment>
 	</environments>
@@ -32,7 +33,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	 -->
 	<mappers>
 		<!-- 通过resource引用mapper的映射文件 -->
-		<mapper resource="com/zheheng/mapper/UserMapper.xml" />
+       <mapper resource="com/zheheng/mapper/UserMapper.xml" /> 
 	</mappers> 
 	
 	
